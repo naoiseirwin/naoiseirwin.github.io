@@ -10,7 +10,7 @@ authors:
   - "Fujia Chen"
 ---
 
-We’ve previously shared updates on our mining development kit (MDK) and ASIC hardware development projects. But, as with any hardware, the software that controls it is key to enabling its functionality. In this Welcome to mining.build post, we want to provide some insight into the directions we are exploring with our mining firmware, API, and user interface.
+We’ve previously shared updates on our mining development kit (MDK) and ASIC hardware development projects. But, as with any hardware, the software that controls it is key to enabling its functionality. In this post, we want to provide some insight into the directions we are exploring with our mining firmware, API, and user interface.
 
 Mining software controls the operation of and interaction between the various hardware components and subsystems within the miner (in particular the ASICs, fans, and power supply), as well as communication with external services such as mining pools and miner management systems, which manage fleets of miners within large mining facilities. Mining software also allows remote monitoring and control of mining hardware, at both the individual miner level, and at the fleet level (via miner management systems), as well as supporting diagnostics, troubleshooting, and repair of miners.
 
@@ -30,9 +30,9 @@ Power tuning
 
 **ASIC diagnostics.** The customer will be able to monitor the performance of each individual ASIC, including the temperature and frequency at which it operates, and easily identify issues with particular ASICs.
 
-![Asci diagnostics](/images/proto/464019e6888c47847393d21ba54dd8c3cf5a9b08-2784x2024.jpg){: loading="lazy"}
+![ASIC diagnostics](/images/proto/464019e6888c47847393d21ba54dd8c3cf5a9b08-2784x2024.jpg){: loading="lazy"}
 
-Asci diagnostics
+ASIC diagnostics
 
 **Failure mode notifications.** Our software will identify failing components, surface component-level information to allow customers to troubleshoot problems, and provide specific remedial actions to the user. This will help to streamline maintenance and repair efforts.
 
