@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if page.url == "/" %}{{ site.title }}{% else %}{{ page.title }} · {{ site.title }}{% endif %}</title>
+  <meta name="description" content="{{ site.description }}">
+  <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+</head>
+<body{% if page.url == "/" %} class="is-home"{% endif %}>
+  <a class="skip" href="#content">Skip to content</a>
+  <header class="site-header">
+    <a class="brand" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+    <nav class="site-nav" aria-label="Primary">
+      <a href="{{ '/writing/' | relative_url }}"{% if page.url == "/writing/" %} aria-current="page"{% endif %}>Writing</a>
+      <a href="{{ '/photos/' | relative_url }}"{% if page.url == "/photos/" %} aria-current="page"{% endif %}>Photos</a>
+    </nav>
+  </header>
+  <main id="content">
+    {{ content }}
+  </main>
+  <footer class="site-footer">
+    <nav aria-label="Social">
+      <a rel="me" href="https://x.com/naoise">X</a>
+      <a rel="me" href="https://www.linkedin.com/in/naoiseirwin">LinkedIn</a>
+      <a rel="me" href="https://www.flickr.com/photos/188746755@N03/">Flickr</a>
+    </nav>
+  </footer>
+</body>
+</html>

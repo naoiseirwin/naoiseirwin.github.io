@@ -1,0 +1,15 @@
+---
+layout: page
+title: Writing
+permalink: /writing/
+---
+<p class="lede">Newest first. Posts first published on the Proto blog are marked Proto.</p>
+<ul class="post-list">
+  {% for post in site.posts %}
+  <li>
+    <time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: "%b %-d, %Y" }}</time>
+    <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+    {% if post.source == "proto" %}<span class="label">Proto</span>{% endif %}
+  </li>
+  {% endfor %}
+</ul>
