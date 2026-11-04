@@ -1,0 +1,31 @@
+title: Naoise Irwin
+author: Naoise Irwin
+description: Writing and photos by Naoise Irwin.
+url: https://nirwin.com
+baseurl: ""
+lang: en
+timezone: UTC
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+  syntax_highlighter: rouge
+permalink: /:year/:month/:day/:title/
+# No plugins beyond what GitHub Pages loads itself. Custom plugins are not used.
+plugins: []
+include:
+  - .well-known
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - .bundle
+  - node_modules
+  - README.md
+  - nirwin-site-inventory
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
