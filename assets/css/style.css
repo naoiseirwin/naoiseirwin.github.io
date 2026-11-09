@@ -100,12 +100,28 @@ a:hover { color: #0e2e22; }
   padding: 7vh 0 3rem;
 }
 
+.home-intro {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.85rem 1rem;
+  margin: 0 0 1.15rem;
+}
+
+.home-avatar {
+  width: 3.6rem;
+  height: 3.6rem;
+  border-radius: 50%;
+  object-fit: cover;
+  flex: none;
+}
+
 .home h1 {
-  font-size: clamp(2.6rem, 7vw, 4rem);
+  font-size: clamp(1.9rem, 3.5vw, 2.55rem);
   font-weight: 500;
-  letter-spacing: -0.035em;
-  line-height: 1.05;
-  margin: 0 0 1.1rem;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  margin: 0;
 }
 
 .home-links {
@@ -447,6 +463,11 @@ a.project-card:hover { border-color: var(--ink); }
   .post-list .label { grid-area: label; }
 
   .home { padding-top: 2.25rem; }
+
+  .home-avatar {
+    width: 3.15rem;
+    height: 3.15rem;
+  }
 
   .photo-carousel-meta { flex-wrap: wrap; }
 }
