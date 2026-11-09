@@ -94,19 +94,34 @@ a:hover { color: #0e2e22; }
 .is-home .site-header { display: none; }
 
 .home {
-  min-height: 70vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  padding: 3rem 0 4rem;
+  justify-content: flex-start;
+  padding: 7vh 0 3rem;
+}
+
+.home-intro {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.85rem 1rem;
+  margin: 0 0 1.15rem;
+}
+
+.home-avatar {
+  width: 3.6rem;
+  height: 3.6rem;
+  border-radius: 50%;
+  object-fit: cover;
+  flex: none;
 }
 
 .home h1 {
-  font-size: clamp(2.6rem, 7vw, 4rem);
+  font-size: clamp(1.9rem, 3.5vw, 2.55rem);
   font-weight: 500;
-  letter-spacing: -0.035em;
-  line-height: 1.05;
-  margin: 0 0 1.1rem;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  margin: 0;
 }
 
 .home-links {
@@ -284,6 +299,111 @@ a.project-card:hover { border-color: var(--ink); }
 
 .photo-card:hover { border-color: var(--ink); }
 
+.photo-carousel {
+  position: relative;
+  margin-top: 2.75rem;
+}
+
+.photo-carousel-frame {
+  position: relative;
+  background: #ebe4d8;
+  border: 1px solid var(--line);
+  aspect-ratio: 3 / 2;
+}
+
+.photo-carousel-link {
+  position: absolute;
+  inset: 0;
+  display: block;
+  color: inherit;
+}
+
+.photo-carousel-link img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  opacity: 1;
+  transition: opacity 0.45s ease;
+}
+
+.photo-carousel-link img.is-incoming {
+  opacity: 0;
+  transition: none;
+}
+
+.photo-carousel-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  margin-top: 0.7rem;
+}
+
+.photo-carousel-caption {
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+.photo-carousel-count {
+  margin: 0;
+  flex: none;
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.photo-carousel-controls {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.35rem 1.35rem;
+}
+
+.photo-carousel-controls button {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  border: 0;
+  margin: 0;
+  min-width: 44px;
+  min-height: 44px;
+  padding: 0.55rem 0.15rem;
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  cursor: pointer;
+}
+
+.photo-carousel-controls button:hover { color: var(--ink); }
+
+.photo-carousel-more {
+  margin: 0.15rem 0 0;
+  font-size: 0.98rem;
+}
+
+.photo-carousel-fallback {
+  margin: 2.75rem 0 0;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 .kicker,
 .card-url {
   display: block;
@@ -322,6 +442,10 @@ a.project-card:hover { border-color: var(--ink); }
   outline-offset: 3px;
 }
 
+@media (prefers-reduced-motion: reduce) {
+  .photo-carousel-link img { transition: none; }
+}
+
 @media (max-width: 680px) {
   html { font-size: 17px; }
 
@@ -338,5 +462,12 @@ a.project-card:hover { border-color: var(--ink); }
   .post-list a { grid-area: title; }
   .post-list .label { grid-area: label; }
 
-  .home { padding-top: 10vh; }
+  .home { padding-top: 2.25rem; }
+
+  .home-avatar {
+    width: 3.15rem;
+    height: 3.15rem;
+  }
+
+  .photo-carousel-meta { flex-wrap: wrap; }
 }

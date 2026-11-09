@@ -4,10 +4,57 @@ title: Naoise Irwin
 permalink: /
 ---
 <div class="home">
-  <h1>Naoise Irwin</h1>
+  <div class="home-intro">
+    <img
+      class="home-avatar"
+      src="{{ '/assets/img/profile.jpg' | relative_url }}"
+      alt="Naoise Irwin"
+      width="400"
+      height="400">
+    <h1>Naoise Irwin</h1>
+  </div>
   <nav class="home-links" aria-label="Sections">
     <a href="{{ '/writing/' | relative_url }}">Selected writings</a>
     <a href="{{ '/projects/' | relative_url }}">Projects</a>
     <a href="{{ '/photos/' | relative_url }}">Photos</a>
   </nav>
+  {%- assign flickr = site.data.flickr %}
+  {%- assign photos = flickr.photos %}
+  {%- if photos and photos.size > 0 %}
+  {%- assign slide = photos.first %}
+  {%- assign slide_title = slide.title | default: "Untitled photograph" %}
+  <section class="photo-carousel" id="photo-carousel" aria-label="Recent photos">
+    <div class="photo-carousel-frame">
+      <a class="photo-carousel-link" href="{{ slide.page }}">
+        <img
+          src="{{ slide.src }}"
+          alt="{{ slide_title | escape }}"
+          width="{{ slide.width | default: 1024 }}"
+          height="{{ slide.height | default: 683 }}"
+          decoding="async"
+          loading="lazy">
+        <span class="visually-hidden"> on Flickr</span>
+      </a>
+    </div>
+    <div class="photo-carousel-meta">
+      <p class="photo-carousel-caption">{{ slide_title | escape }}</p>
+      <p class="photo-carousel-count" aria-hidden="true" hidden></p>
+    </div>
+    <div class="photo-carousel-controls" hidden>
+      <button type="button" class="photo-carousel-prev">Previous</button>
+      <button type="button" class="photo-carousel-pause" aria-pressed="false">Pause</button>
+      <button type="button" class="photo-carousel-next">Next</button>
+    </div>
+    <p class="photo-carousel-more">
+      <a href="{{ flickr.photostream | default: 'https://www.flickr.com/photos/188746755@N03/' }}">All photos on Flickr</a>
+    </p>
+    <p class="visually-hidden" id="photo-carousel-status" aria-live="polite"></p>
+    <script type="application/json" id="photo-carousel-data">{{ photos | jsonify | replace: '<', '\u003c' }}</script>
+  </section>
+  <script src="{{ '/assets/js/flickr-carousel.js' | relative_url }}"></script>
+  {%- else %}
+  <p class="photo-carousel-fallback">
+    <a href="https://www.flickr.com/photos/188746755@N03/">Recent photos on Flickr</a>
+  </p>
+  {%- endif %}
 </div>
