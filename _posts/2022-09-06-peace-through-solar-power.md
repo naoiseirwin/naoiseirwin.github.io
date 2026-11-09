@@ -4,7 +4,7 @@ title: "Peace Through Solar Power"
 date: 2022-09-06 12:00:00 +0000
 source: nirwin
 permalink: /2022/09/06/peace-through-solar-power/
-original_url: https://nirwin.com/2022/09/06/peace-through-solar-power/
+original_url: https://naoiseirwin.com/2022/09/06/peace-through-solar-power/
 featured_image: /images/peace-through-solar-power.jpg
 categories:
   - "Blog"

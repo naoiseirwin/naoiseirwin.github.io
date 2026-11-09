@@ -1,6 +1,6 @@
 # Naoise Irwin
 
-Personal site for [nirwin.com](https://nirwin.com), built with Jekyll for GitHub Pages.
+Personal site for [naoiseirwin.com](https://naoiseirwin.com), built with Jekyll for GitHub Pages.
 
 Selected writings lives in `_posts/` and is listed at `/writing/`. Projects are listed at `/projects/`. The two articles from the previous WordPress site keep their permalinks (`/2021/04/19/the-promise-of-parabolic-dish-csp-technology/` and `/2022/09/06/peace-through-solar-power/`). Posts from the Proto blog use the same dated URL shape and are labeled on that index.
 

@@ -4,7 +4,7 @@ title: "The Promise of Parabolic Dish CSP Technology"
 date: 2021-04-19 12:00:00 +0000
 source: nirwin
 permalink: /2021/04/19/the-promise-of-parabolic-dish-csp-technology/
-original_url: https://nirwin.com/2021/04/19/the-promise-of-parabolic-dish-csp-technology/
+original_url: https://naoiseirwin.com/2021/04/19/the-promise-of-parabolic-dish-csp-technology/
 featured_image: /images/focus-1.jpg
 also_on:
   name: Solarflux
