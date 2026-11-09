@@ -4,20 +4,18 @@ title: Naoise Irwin
 permalink: /
 ---
 <div class="home">
-  <div class="home-intro">
-    <img
-      class="home-avatar"
-      src="{{ '/assets/img/profile.jpg' | relative_url }}"
-      alt="Naoise Irwin"
-      width="400"
-      height="400">
-    <h1>Naoise Irwin</h1>
+  <div class="home-top">
+    <div class="home-intro">
+      <img
+        class="home-avatar"
+        src="{{ '/assets/img/profile.jpg' | relative_url }}"
+        alt="Naoise Irwin"
+        width="400"
+        height="400">
+      <h1>Naoise Irwin</h1>
+    </div>
+    {% include primary-nav.html %}
   </div>
-  <nav class="home-links" aria-label="Sections">
-    <a href="{{ '/writing/' | relative_url }}">Selected writings</a>
-    <a href="{{ '/projects/' | relative_url }}">Projects</a>
-    <a href="{{ '/photos/' | relative_url }}">Photos</a>
-  </nav>
   {%- assign flickr = site.data.flickr %}
   {%- assign photos = flickr.photos %}
   {%- if photos and photos.size > 0 %}
